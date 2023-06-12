@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: Inter, Lexend Deca, sans-serif;
+  color: white;
+}
+.parent {
+  width: 1440px;
+  background-color: hsl(233, 47%, 7%);
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 120px 100px;
+}
+@media (max-width: 767px) {
+  .parent {
+    width: 375px;
+    margin: 0 auto;
+    padding: 61px 19px;
+  }
+}
+.parent .card {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .parent .card {
+    flex-direction: column-reverse;
+  }
+}
+.parent .card .info {
+  background-color: hsl(244, 38%, 16%);
+  flex: 1;
+  border-radius: 8px 0 0 8px;
+}
+.parent .card .info .container {
+  margin: 80px;
+}
+.parent .info .title {
+  font-size: 42px;
+  font-weight: 700;
+}
+.parent .info .title .purpel {
+  color: hsl(277, 64%, 61%);
+}
+.parent .info .detailes {
+  margin: 0 0 60px;
+  line-height: 1.8;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+@media (max-width: 767px) {
+  .parent .card .info {
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 8px 8px;
+  }
+  .parent .card .info .container {
+    margin: 30px;
+  }
+  .parent .info .title {
+    font-size: 29px;
+  }
+  .parent .info .detailes {
+    font-size: 12px;
+    margin: 0px auto 35px;
+  }
+}
+.parent .info .numbers {
+  display: flex;
+  justify-content: space-between;
+  max-width: 410px;
+  align-items: center;
+}
+
+.parent .info .numbers .one .num {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.parent .info .numbers .one .explin {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .parent .info .numbers {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .parent .info .numbers .one {
+    margin-bottom: 25px;
+  }
+}
+.parent .card .image {
+  position: relative;
+  min-height: 247px;
+  flex: 1;
+}
+.parent .card .image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 247px;
+  content: "";
+  background-color: hsl(277deg 64% 61% / 70%);
+  border-radius: 0 8px 8px 0;
+}
+.parent .image img.big {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+}
+@media (max-width: 767px) {
+  .parent .card .image {
+    margin-bottom: 0;
+  }
+  .parent .card .image::before {
+    border-radius: 8px 8px 0 0;
+  }
+  .parent .image img.big {
+    border-radius: 8px 8px 0 0;
+  }
+}
+.name {
+  background: orange;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+}
